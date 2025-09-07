@@ -127,7 +127,7 @@ while True:
         delay -= 0.001  # faster
 
         # update score
-        score += 10  # maybe should be +5? idk
+        score += 10  # 
         if score > highScore:
             highScore = score
 
@@ -151,7 +151,7 @@ while True:
     # check if snake hits itself
     for seg in segments:
         if seg.distance(snakeHead) < 20:
-            time.sleep(2)   # 9 was too long lol
+            time.sleep(2)  
             snakeHead.goto(0, 0)
             snakeHead.direction = "stop"
 
@@ -165,3 +165,4 @@ while True:
             pen.write("Score: {} High Score: {}".format(score, highScore), align="center", font=("Courier", 24, "normal"))
 
     time.sleep(delay)  # controls snake speed
+
